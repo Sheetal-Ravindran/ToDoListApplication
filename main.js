@@ -1,27 +1,20 @@
 // Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("li");
+var myNodeList = document.getElementsByTagName("li");
 var i;
-for (i = 0; i < myNodelist.length; i++) {
+for (i = 0; i < myNodeList.length; i++) {
   var span = document.createElement("button");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);
   span.onclick = closeClick;
-  myNodelist[i].appendChild(span);
+  myNodeList[i].appendChild(span);
+
+  var checkbox = myNodeList[i].querySelector('input[type="checkbox"]');
+  checkbox.addEventListener('click', function(event) {
+      var parent = event.currentTarget.parentElement;
+      parent.classList.toggle('checked');
+  });
 }
-
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector("ul");
-
-list.addEventListener(
-  "click",
-  function (event) {
-    if (event.target.tagName === "INPUT") {
-      event.target.classList.toggle("checked");
-    }
-  },
-  false
-);
 
 // Create a new list item when clicking on the "Add" button
 function createNewElement() {
