@@ -46,7 +46,8 @@ function createNewElement() {
   li.appendChild(span);
 }
 
-function closeClick() {
-  const div = this.parentElement;
-  div.style.display = "none";
+function closeClick(event) {
+  const listItem = event.currentTarget.parentElement;
+  const container = listItem.parentElement;
+  container.removeChild(listItem);
 }
