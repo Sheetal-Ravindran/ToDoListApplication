@@ -2,7 +2,7 @@
 var myNodelist = document.getElementsByTagName("li");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("span");
+  var span = document.createElement("button");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);
@@ -39,13 +39,13 @@ function createNewElement() {
 
   var li = document.createElement("li");
   var textNode = document.createTextNode(inputValue);
-  li.appendChild(textNode);
   li.appendChild(checkbox);
+  li.appendChild(textNode);
 
   document.getElementById("myList").appendChild(li);
   document.getElementById("myInput").value = "";
 
-  var span = document.createElement("span");
+  var span = document.createElement("button");
   var txt = document.createTextNode("\u00D7");
   span.className = "close";
   span.appendChild(txt);
