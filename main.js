@@ -16,7 +16,8 @@ for (i = 0; i < myNodeList.length; i++) {
   });
 }
 
-document.getElementById("myInput").addEventListener("keyup", function (event) {
+//Perform add fuction when we press enter
+document.querySelector("#myInput").addEventListener("keyup", function (event) {
   event.preventDefault();
   if (event.keyCode === 13) {
     createNewElement();
@@ -25,7 +26,7 @@ document.getElementById("myInput").addEventListener("keyup", function (event) {
 
 // Create a new list item when clicking on the "Add" button
 function createNewElement() {
-  const inputValue = document.getElementById("myInput").value;
+  const inputValue = document.querySelector("#myInput").value;
   if (inputValue === "") {
     alert("You must write something!");
     return;
