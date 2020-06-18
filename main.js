@@ -10,11 +10,18 @@ for (i = 0; i < myNodeList.length; i++) {
   myNodeList[i].appendChild(span);
 
   const checkbox = myNodeList[i].querySelector('input[type="checkbox"]');
-  checkbox.addEventListener('click', function(event) {
-      const parent = event.currentTarget.parentElement;
-      parent.classList.toggle('checked');
+  checkbox.addEventListener("click", function (event) {
+    const parent = event.currentTarget.parentElement;
+    parent.classList.toggle("checked");
   });
 }
+
+document.getElementById("myInput").addEventListener("keyup", function (event) {
+  event.preventDefault();
+  if (event.keyCode === 13) {
+    createNewElement();
+  }
+});
 
 // Create a new list item when clicking on the "Add" button
 function createNewElement() {
