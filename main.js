@@ -1,24 +1,6 @@
 const ENTER_KEY = 13;
 
-// Create a "close" button and append it to each list item
-const myNodeList = document.getElementsByTagName("li");
-let i;
-for (i = 0; i < myNodeList.length; i++) {
-  const span = document.createElement("button");
-  const txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  span.onclick = closeClick;
-  myNodeList[i].appendChild(span);
-
-  const checkbox = myNodeList[i].querySelector('input[type="checkbox"]');
-  checkbox.addEventListener("click", function (event) {
-    const parent = event.currentTarget.parentElement;
-    parent.classList.toggle("checked");
-  });
-}
-
-//Perform add fuction when we press enter
+//Perform add function when we press enter
 document.querySelector("#myInput").addEventListener("keyup", function (event) {
   event.preventDefault();
   if (event.keyCode === ENTER_KEY) {
