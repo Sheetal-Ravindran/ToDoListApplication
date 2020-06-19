@@ -11,6 +11,30 @@
 }
 
 .container {
-  width: 500px;
+  width: 800px;
   margin: auto;
+  background-color: lightgrey;
+  border: 15px solid #28315a;
+  padding: 50px;
+  color: #28315a;
+  font-size: x-large;
 }
+
+.close {
+    /* position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px; */
+    background-color:rgb(144, 147, 150);
+    margin-left: 20px;
+  }
+  
+  #myInput{
+    font-size: large ;
+  }
+
+  .addBtn{
+
+    font-size: large ;
+    background-color:rgb(144, 147, 150);
+  }

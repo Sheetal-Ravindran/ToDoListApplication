@@ -27,8 +27,8 @@ function createNewElement() {
   li.appendChild(checkbox);
   li.appendChild(textNode);
 
-  document.getElementById("myList").appendChild(li);
-  document.getElementById("myInput").value = "";
+  document.querySelector("#myList").appendChild(li);
+  document.querySelector("#myInput").value = "";
 
   const span = document.createElement("button");
   const txt = document.createTextNode("\u00D7");
