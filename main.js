@@ -1,3 +1,5 @@
+const ENTER_KEY = 13;
+
 // Create a "close" button and append it to each list item
 const myNodeList = document.getElementsByTagName("li");
 let i;
@@ -19,7 +21,7 @@ for (i = 0; i < myNodeList.length; i++) {
 //Perform add fuction when we press enter
 document.querySelector("#myInput").addEventListener("keyup", function (event) {
   event.preventDefault();
-  if (event.keyCode === 13) {
+  if (event.keyCode === ENTER_KEY) {
     createNewElement();
   }
 });

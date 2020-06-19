@@ -7,32 +7,34 @@
     <link rel="stylesheet" href="./main.css" />
   </head>
   <body>
-    <div id="myDiv" class="header">
-      <h1 style="margin: 5px;">My To Do List</h1>
-      <input type="text" id="myInput" placeholder="Title..." />
-      <button onclick="createNewElement()" class="addBtn">Add</button>
+    <div class="container">
+      <div id="myDiv" class="header">
+        <h1 class="heading">My To Do List</h1>
+        <input type="text" id="myInput" placeholder="Title..." />
+        <button onclick="createNewElement()" class="addBtn">Add</button>
+      </div>
+      <ul id="myList" class="myList">
+        <li>
+          <input type="checkbox" id="list1" text="Hit the gym" />
+          <label for="list1"> Hit the gym </label>
+        </li>
+        <li class="checked">
+          <input type="checkbox" id="list2" value="Meet Friends" checked />
+          <label for="list2"> Meet Friends </label>
+        </li>
+        <li>
+          <input type="checkbox" id="list3" value="Buy eggs" />
+          <label for="list3">Buy eggs </label>
+        </li>
+        <li>
+          <input type="checkbox" id="list4" value="Read a book" />
+          <label for="list4"> Read a book </label>
+        </li>
+        <li>
+          <input type="checkbox" id="list5" value="Organize office work" />
+          <label for="list5"> Organize office work </label>
+        </li>
+      </ul>
     </div>
-    <ul id="myList" >
-      <li>
-        <input type="checkbox" id="list1" text="Hit the gym" />
-        <label for="list1"> Hit the gym </label>
-      </li>
-      <li class="checked">
-        <input type="checkbox" id="list2" value="Meet Friends" checked />
-        <label for="list2" > Meet Friends </label>
-      </li>
-      <li>
-        <input type="checkbox" id="list3" value="Buy eggs" />
-        <label for="list3">Buy eggs </label>
-      </li>
-      <li>
-        <input type="checkbox" id="list4" value="Read a book" />
-        <label for="list4"> Read a book </label>
-      </li>
-      <li>
-        <input type="checkbox" id="list5" value="Organize office work" />
-        <label for="list5"> Organize office work </label>
-      </li>
-    </ul>
   </body>
 </html>
