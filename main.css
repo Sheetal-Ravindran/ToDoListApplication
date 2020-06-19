@@ -1,3 +1,13 @@
 .checked {
     color: #5370e6;
 }
+
+#myList{
+    list-style: none;
+}
+
+h1{
+    text-align:center ;
+}
+
+  
